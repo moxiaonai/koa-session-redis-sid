@@ -7,14 +7,14 @@ koa-session-redis3
 I ([@moxiaonai](https://github.com/moxiaoani)) now help maintain [koa/koa-redis](https://github.com/koajs/koa-redis).
 
 ---
-Redis store-based session middleware for Koa. This version adds the `keySchema` option to use a prefix on Redis keys. It also adds `hiredis` and `puid`.
+Redis store-based session middleware for Koa. This version adds the `keySchema` option to use a prefix on Redis keys. It also adds `hiredis` and `puid`. what i did is that solved when the front and rear separated.
 
 Forked from [koa-session-redis](https://github.com/DaAwesomeP/koa-session-redis3). Based on [koa-session](https://github.com/koajs/session).
 
 ## Installation
 
 ```javascript
-$ npm install koa-session-redis3
+$ npm install koa-session-redis-sid
 ```
 When it installs it should also include `hiredis`, which is a native module. If it fails to build, then no worries (it is only a speed improvement), as it will fall back to the JavaScript parser.
 
