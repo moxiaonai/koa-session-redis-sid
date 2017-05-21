@@ -1,4 +1,5 @@
-koa-session-redis3
+koa-session-
+
 ==================
 [![Travis](https://img.shields.io/travis/DaAwesomeP/koa-session-redis3.svg?style=flat-square)](https://travis-ci.org/DaAwesomeP/koa-session-redis3) [![npm](https://img.shields.io/npm/v/koa-session-redis3.svg?style=flat-square)](https://www.npmjs.com/package/koa-session-redis3) [![npm](https://img.shields.io/npm/dm/koa-session-redis3.svg?style=flat-square)](https://www.npmjs.com/package/koa-session-redis3) [![David](https://img.shields.io/david/DaAwesomeP/koa-session-redis3.svg?style=flat-square)](https://david-dm.org/DaAwesomeP/koa-session-redis3) [![GitHub license](https://img.shields.io/github/license/DaAwesomeP/koa-session-redis3.svg?style=flat-square)](https://github.com/DaAwesomeP/koa-session-redis3/blob/master/LICENSE) [![Gitter chat](https://img.shields.io/badge/gitter-join%20chat-1DCE73.svg?style=flat-square)](https://gitter.im/DaAwesomeP/koa-session-redis3)
 ---
@@ -21,7 +22,7 @@ When it installs it should also include `hiredis`, which is a native module. If 
 ## Example
 
 ```javascript
-var session = require('koa-session-redis3');
+var session = require('koa-session-redis-sid');
 
 var koa = require('koa');
 var app = koa();
