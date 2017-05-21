@@ -10,7 +10,7 @@ I ([@moxiaonai](https://github.com/moxiaoani)) now help maintain [koa/koa-redis]
 ---
 Redis store-based session middleware for Koa. This version adds the `keySchema` option to use a prefix on Redis keys. It also adds `hiredis` and `puid`. what i did is that solved when the front and rear separated.
 
-Forked from [koa-session-redis](https://github.com/DaAwesomeP/koa-session-redis3). Based on [koa-session](https://github.com/koajs/session).
+Forked from [koa-session-redis3](https://github.com/DaAwesomeP/koa-session-redis3). Based on [koa-session](https://github.com/koajs/session).
 
 ## Installation
 
