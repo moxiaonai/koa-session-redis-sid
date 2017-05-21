@@ -1,12 +1,12 @@
 'use strict';
-/* index.js by DaAwesomeP, Chilledheart
- * Originally forked 9/3/2015 from https://github.com/Chilledheart/koa-session-redis
- * This file provides the functions of koa-session-redis3.
- * https://github.com/DaAwesomeP/koa-session-redis3
+/* index.js by DaAwesomeP, Chilledheart,Moxiaonai
+ * Originally forked 21/5/2017 from https://github.com/Chilledheart/koa-session-redis
+ * This file provides the functions of koa-session-redis-sid.
+ * https://github.com/moxiaonai/koa-session-redis-sid
  * 
  * Copyright 2015-present DaAwesomeP
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -19,7 +19,7 @@
  * limitations under the License.
  */
 
-var debug = require('debug')('koa-session-redis3');
+var debug = require('debug')('koa-session-redis-sid');
 var Puid = require('puid');
 var puid = new Puid();
 var thunkify = require('thunkify');
@@ -111,12 +111,13 @@ module.exports = function (opts) {
     this.cookieOption = cookieOption;
     this.sessionKey = key;
     this.sessionId = null;
-
-    sid = this.cookies.get(key, cookieOption);
+   //get sid from request header if failed get from the request.body
+    sid = this.cookies.get(key, cookieOption)||this.request.body['sid'];
 
     if (sid) {
       debug('sid %s', sid);
       try {
+      	 // search session from redis
         json = yield client.get(redisOption.keySchema + sid);
       }catch (e) {
         debug('encounter error %s', e);
