@@ -4,12 +4,12 @@ koa-session-redis3
 ---
 
 # DEPRECATED
-I ([@DaAwesomeP](https://github.com/DaAwesomeP)) now help maintain [koa/koa-redis](https://github.com/koajs/koa-redis).
+I ([@moxiaonai](https://github.com/moxiaoani)) now help maintain [koa/koa-redis](https://github.com/koajs/koa-redis).
 
 ---
 Redis store-based session middleware for Koa. This version adds the `keySchema` option to use a prefix on Redis keys. It also adds `hiredis` and `puid`.
 
-Forked from [koa-session-redis](https://github.com/Chilledheart/koa-session-redis). Based on [koa-session](https://github.com/koajs/session).
+Forked from [koa-session-redis](https://github.com/DaAwesomeP/koa-session-redis3). Based on [koa-session](https://github.com/koajs/session).
 
 ## Installation
 
